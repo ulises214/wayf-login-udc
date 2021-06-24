@@ -6,10 +6,11 @@ class WayfLoginUDCApp extends StatelessWidget {
   const WayfLoginUDCApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData.light().copyWith(brightness: Brightness.dark),
       title: 'Wayf Login UdC',
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }
