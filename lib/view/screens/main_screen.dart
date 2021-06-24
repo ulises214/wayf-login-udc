@@ -1,8 +1,8 @@
 part of screens;
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
-
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key, required this.onWayfResolve}) : super(key: key);
+  final OnWayfResolve onWayfResolve;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class MainScreen extends StatelessWidget {
       context,
       MaterialPageRoute(
         builder: (context) {
-          return const WayfWebViewScreen();
+          return WayfWebViewScreen(onWayfResolve: onWayfResolve);
         },
       ),
     );

@@ -10,7 +10,11 @@ class WayfLoginUDCApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(brightness: Brightness.dark),
       title: 'Wayf Login UdC',
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      home: LoginScreen(
+        onWayfResolve: (wayfData) {
+          print(wayfData.displayName);
+        },
+      ),
     );
   }
 }
